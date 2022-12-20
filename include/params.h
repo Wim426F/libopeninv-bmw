@@ -26,7 +26,7 @@
 namespace Param
 {
    #define PARAM_ENTRY(category, name, unit, min, max, def, id) name,
-   #define VALUE_ENTRY(name, unit, id) name,
+   #define VALUE_ENTRY(category, name, unit, id) name,
    typedef enum
    {
        PARAM_LIST

@@ -24,7 +24,7 @@ namespace Param
 {
 
 #define PARAM_ENTRY(category, name, unit, min, max, def, id) { category, #name, unit, FP_FROMFLT(min), FP_FROMFLT(max), FP_FROMFLT(def), id },
-#define VALUE_ENTRY(name, unit, id) { 0, #name, unit, 0, 0, 0, id },
+#define VALUE_ENTRY(category, name, unit, id) { category, #name, unit, 0, 0, 0, id },
 static const Attributes attribs[] =
 {
     PARAM_LIST
@@ -33,7 +33,7 @@ static const Attributes attribs[] =
 #undef VALUE_ENTRY
 
 #define PARAM_ENTRY(category, name, unit, min, max, def, id) FP_FROMFLT(def),
-#define VALUE_ENTRY(name, unit, id) 0,
+#define VALUE_ENTRY(category, name, unit, id) 0,
 static s32fp values[] =
 {
     PARAM_LIST
@@ -42,7 +42,7 @@ static s32fp values[] =
 #undef VALUE_ENTRY
 
 #define PARAM_ENTRY(category, name, unit, min, max, def, id) 0,
-#define VALUE_ENTRY(name, unit, id) 0,
+#define VALUE_ENTRY(category, name, unit, id) 0,
 static uint8_t flags[] =
 {
     PARAM_LIST
