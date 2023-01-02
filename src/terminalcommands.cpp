@@ -270,6 +270,8 @@ void TerminalCommands::PrintBmsJson(Terminal* term, char *arg)
    int counter = 0;
    char comma = ' ';
 
+   BMS::request_data = true;
+
    fprintf(term, "{");
    for (uint16_t module_idx = 0; module_idx < vrows; module_idx++)
    {
